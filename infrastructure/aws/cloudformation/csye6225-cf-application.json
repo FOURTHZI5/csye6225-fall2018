@@ -115,23 +115,11 @@
     "myS3Bucket": {
       "Type": "AWS::S3::Bucket",
       "Properties": {
-        "BucketName": {
-          "Fn::Join": [
-            "",
-            [
-              {
-                "Ref": "domainName"
-              },
-              ".csye6225.com"
-            ]
-          ]
-        },
+        "BucketName": { "Fn::Join": [ "", [ { "Ref": "domainName" }, ".csye6225.com" ] ] },
         "Tags": [
           {
             "Key": "Name",
-            "Value": {
-              "Ref": "stackName"
-            }
+            "Value": { "Ref": "stackName" }
           }
         ]
       }
