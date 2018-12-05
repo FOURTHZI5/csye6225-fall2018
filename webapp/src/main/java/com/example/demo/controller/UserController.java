@@ -62,7 +62,6 @@ public class UserController {
         return null;
     }
 
-
     @PostMapping("/userExist")
     public Boolean userExist(@RequestBody User user, HttpServletResponse response) {
         User existUser = userRepository.findByEmail(user.getEmail());
